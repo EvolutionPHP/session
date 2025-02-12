@@ -8,7 +8,7 @@
 
 namespace EvolutionPHP\Session;
 
-use EvolutionPHP\HTTP\Request;
+use EvolutionPHP\HTTP\HTTP;
 use Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag;
 use Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler;
 use Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage;
@@ -46,7 +46,7 @@ class Session
 
 		]);
 		$this->session = new \Symfony\Component\HttpFoundation\Session\Session($sessionStorage, new AttributeBag());
-		$request = Request::init();
+		$request = HTTP::request();
 		if($request->is_cli()){
 			return;
 		}

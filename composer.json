@@ -20,6 +20,6 @@
   },
   "require": {
     "php": ">=8.2",
-    "evolutionphp/http": "@dev"
+    "evolutionphp/http": "v1.0"
   }
 }
